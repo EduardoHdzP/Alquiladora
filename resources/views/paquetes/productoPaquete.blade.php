@@ -61,15 +61,15 @@ if($pa){
 					<tr>
 						<td>{{ $pro->pro_id }}</td>
 						<td>{{ $pro->producto }}</td>
-						<td>{{ $p->medidas }}</td>
-						<td>{{ $p->ppu }}</td>
-						<td>{{ $p->cantidad }}</td>
-						<td>{{ $p->ganancia }}</td>
+						<td>{{ $pro->medidas }}</td>
+						<td>{{ $pro->ppu }}</td>
+						<td>{{ $pro->cantidad }}</td>
+						<td>{{ $pro->ganancia }}</td>
 						<td>@php
-							$a=($p->ganancia/100)*$p->ppu*$p->cantidad;
+							$a=($pro->ganancia/100)*$pro->ppu*$pro->cantidad;
 							echo($a);
 						@endphp</td>
-						<td><button class="btn btn-danger btn-block btn-sm">Eliminar</button></td>
+						<td><a href="/package/destroyPaqpros/{{ $paC->paq_id }}/{{ $pro->paqpro_id }}" class="btn btn-danger btn-block btn-sm">Eliminar</a></td>
 					</tr>
 				@endforeach
 				

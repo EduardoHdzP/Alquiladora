@@ -19,6 +19,13 @@
 		            <input type="text" class="form-control" id="nombre" name="nombre">
 		          </div>
 		          <div class="form-group">
+					<label>Imagen</label>				
+					<div class="custom-file">
+					  <input type="file" class="custom-file-input" id="imagen" name="imagen">
+					  <label class="custom-file-label" for="imagen" id="img">default</label>
+					</div>
+				  </div>
+		          <div class="form-group">
 		            <label for="descuento" class="col-form-label">Descuento</label>
 		            <input type="text" class="form-control" id="descuento" name="descuento"></input>
 		          </div>

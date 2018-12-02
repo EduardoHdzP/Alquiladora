@@ -67,5 +67,6 @@ Route::get("/products/destroy/{id}","ProductosController@destroy")->name("destro
 Route::get('/package/create',"PaquetesController@create")->name("createPackage");
 Route::get('/package/store',"PaquetesController@store")->name("storePackage");
 Route::get('/package/update/{id}',"PaquetesController@addProduct")->name("addProductPackage");
+Route::get('/package/destroyPaqpros/{idPaq}/{idPapr}','PaquetesController@destroyPaqpros')->name('destroyPaqpros');
 /*################################ FIN RUTAS DE PAQUESTES #####################################
 #############################################################################################*/

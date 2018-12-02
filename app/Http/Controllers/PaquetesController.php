@@ -43,6 +43,7 @@ class PaquetesController extends Controller
 	$date = new \DateTime();
 	$p->nombre=$pa["nombre"];
 	$p->descripcion=$pa["descripcion"];
+    $p->imagen=$pa["imagen"];
 	$p->precio=0;
 	$p->descuento=$pa["descuento"];
 	$p->status=1;
@@ -93,9 +94,19 @@ class PaquetesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id){
         //
+    }
+
+
+
+
+
+    public function destroyPaqpros($idPaq,$idPapr){
+        $pp=Paqpro::find($idPapr);
+        $pp->delete();
+
+        return redirect()->route('addProductPackage',$parameters = ['$id'=>$idPaq]);
     }
 
 
@@ -112,7 +123,7 @@ class PaquetesController extends Controller
         }
         $paC=DB::select('SELECT * FROM paquetes WHERE paq_id='.$id);
         $pa=DB::select("
-            SELECT paquetes.paq_id,paquetes.nombre paquete,productos.nombre producto,resurtidos.ppu,paqpros.cantidad,paquetes.*, productos.*
+            SELECT paqpro_id,paquetes.paq_id,paquetes.nombre paquete,productos.nombre producto,resurtidos.ppu,paqpros.cantidad,paquetes.*, productos.*
                 FROM productos
                     LEFT JOIN paqpros ON paqpros.pro_id = productos.pro_id
                     LEFT JOIN paquetes ON paqpros.paq_id = paquetes.paq_id
@@ -125,7 +136,7 @@ class PaquetesController extends Controller
                 from productos 
             where status=1;
             ");
-        // print_r($prod);
+        // print_r($pa);
         // echo($id);
         // return "gola";
         return view("paquetes.productoPaquete",compact('pa','productos','paC'));
