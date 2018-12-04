@@ -116,6 +116,10 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
+        print_r("Clave:".$id);
+        $p=Paquete::find($id);
+        $p->status=0;
+        $p->save();
         return "ok";
     }
 
@@ -154,9 +158,6 @@ class PaquetesController extends Controller
                 from productos 
             where status=1;
             ");
-        // print_r($pa);
-        // echo($id);
-        // return "gola";
         return view("paquetes.productoPaquete",compact('pa','productos','paC'));
         // return redirect()->route('addProductPackage', $parameters = ['$id'=>$id]);
     }
