@@ -116,11 +116,8 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
-        //
+        return "ok";
     }
-
-
-
 
 
     public function destroyPaqpros($idPaq,$idPapr){

@@ -171,16 +171,26 @@ class ProductosController extends Controller{
 
 
      public function search(Request $request,$categoria){
-        $f=$request->all();
-        
-        $cat=DB::select("select cat_id from  categorias where nombre='".$categoria."'");
-        // print_r($cat);
-        $productos=DB::select("
-            SELECT * 
-                FROM productos p
-            WHERE status=1 and cat_id=".$cat[0]->cat_id
+        $productos;
+        if ($categoria!="Sillas" &&
+            $categoria!="Mesas" &&
+            $categoria!="Lonas" &&
+            $categoria!="Carpas"
+        ) {
+            $bus=$request->all();
+            $nombre=$bus["buscar"];
+            $productos=DB::select("select * from productos where nombre like '%".$nombre."%'");
+        } else {
+            $cat=DB::select("select cat_id from  categorias where nombre='".$categoria."'");
+            $productos=DB::select("
+                SELECT * 
+                    FROM productos p
+                WHERE status=1 and cat_id=".$cat[0]->cat_id
             );
-        // print_r($productos);
+        }
+        
+        
+        
         return view("productos.listadoOperaciones",compact("productos"));
      }
 

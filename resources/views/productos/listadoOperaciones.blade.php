@@ -2,13 +2,9 @@
 @include("menu")
 
 
-
-
-
 <div id="detalles">	
 
 </div>
-
 
 <div class="row mt-3">
 	<div class="col-12 col-sm-12 col-md-12 mb-3">
@@ -37,8 +33,8 @@
 				        </div>
 				      </li>
 				    </ul>
-				    <form class="form-inline my-2 my-lg-0" action="hola">
-				      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+				    <form class="form-inline my-2 my-lg-0" action="/products/search/@">
+				      <input class="form-control mr-sm-2" name="buscar" id="buscar" type="search" placeholder="Buscar" aria-label="Buscar">
 				      <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
 				    </form>
 				  </div>
@@ -46,27 +42,7 @@
 			</div>
 		</div>
 				
-		{{-- <div class="row justify-content-center">
-			<div class="col-md-3 bg-info p-3">		
-			</div>
-
-			<div class="col-md-8  bg-info">
-				<div class="row justify-content-end">
-					<div class="col-md-6 bg-info p-3">
-						<div class="form-group pl-5 m-0">
-						    <input type="text" class="form-control form-control-lg" id="filtro" name="filtro" placeholder="Nombre del producto">
-						</div>
-					</div>
-					<div class="col-md-2 bg-info p-3">
-						<button type="submit" class="btn btn-lg btn-block bg-danger text-white rounded">Buscar</button>
-					</div>
-				</div>
-			</div>
-		</div> --}}
 	</div>
-
-
-
 
 	<div class="col-12 col-sm-12 col-md-12">
 		@if ($productos)
@@ -81,8 +57,6 @@
 						  		<div class="col-md-3"><h5><span class="badge badge-success">$ {{ $p->ganancia }}</span></h5></div>
 						  	</div>
 						   
-						    {{-- <h6>Precio  <span class="badge badge-secondary">$ {{ $p->costo }}</span></h6> --}}
-						    {{-- <p class="card-text bg-dark rounded">Precio:{{ $p->costo }}</p> --}}
 						    <p class="card-text m-0"><strong>Descripcion:</strong>
 						    	@if (strlen($p->descripcion)>54)
 							    	<?php echo substr($p->descripcion,0,52)."...";?>
@@ -94,9 +68,7 @@
 						    <p class="card-text m-0"><strong>Medidas:</strong>{{ $p->medidas }}</p>
 						    <p class="card-text m-0"><strong>Utilidad:</strong>{{ $p->ganancia }}</p>
 
-						    {{-- <p class="card-text">Precio:{{ $p->costo }}</p> --}}
 						    <center>
-						    	{{-- <a href="#" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg">Detalles</a> --}}
 						    	<a onclick="detallesProducto('{{ $p->pro_id }}')" class="btn btn-info text-white">Detalles</a>
 						    	<a href="/products/edit/{{ $p->pro_id }}" class="btn btn-warning text-white">Editar</a>
 						    	<a onclick="eliminarProducto('{{ $p->pro_id }}')" href="#" class="btn btn-danger">Eliminar</a>

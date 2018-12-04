@@ -15,7 +15,7 @@
 				<ul class="children">
 					<li><a href="/products/create">Nuevo <span class="icon-dot"></span></a></li>
 					<li><a href="/products/operations">Modificar <span class="icon-dot"></span></a></li>
-					<li><a href="/productos/eliminar"></span>Eliminar</a></li>
+					<li><a href="/products/operations"></span>Eliminar</a></li>
 					<li><a href="/products">Listar <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>

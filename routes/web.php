@@ -69,6 +69,7 @@ Route::get('/packages/{id}',"PaquetesController@show")->where("id","[0-9]+");
 Route::get('/package/create',"PaquetesController@create")->name("createPackage");
 Route::get('/package/store',"PaquetesController@store")->name("storePackage");
 Route::get('/package/update/{id}',"PaquetesController@addProduct")->name("addProductPackage");
+Route::get("/packages/destroy/{id}","PaquetesController@destroy")->name("destroyPackage");
 Route::get('/package/destroyPaqpros/{idPaq}/{idPapr}','PaquetesController@destroyPaqpros')->name('destroyPaqpros');
 /*################################ FIN RUTAS DE PAQUESTES #####################################
 #############################################################################################*/
