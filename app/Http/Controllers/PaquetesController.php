@@ -14,9 +14,15 @@ class PaquetesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index(){
+        $paquetes=DB::select("
+            SELECT * 
+                FROM paquetes 
+            WHERE status=1;"
+        );
+
+        // print_r($paquetes);
+        return view("paquetes.paquetes",compact('paquetes'));
     }
 
     /**

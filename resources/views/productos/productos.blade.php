@@ -9,12 +9,40 @@
 
 <div class="row mt-3">
 	<div class="col-12 col-sm-12 col-md-12 mb-3">
-		<div class="row">
+		<div class="row justify-content-center">
 			<div class="col-md-12 pt-3">
 				<p class="h1 text-center text-info">Nuestros productos</p>
 			</div>
+			<div class="col-md-8">
+				<nav class="navbar navbar-expand-lg navbar-light bg-info">
+				  <a class="navbar-brand text-white" href="#">Filtros directos</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Categorias
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="/products/search/Sillas">Sillas</a>
+				          <a class="dropdown-item" href="/products/search/Mesas">Mesas</a>
+				          <a class="dropdown-item" href="/products/search/Lonas">Lonas</a>
+				          <a class="dropdown-item" href="/products/search/Carpas">Carpas</a>
+				        </div>
+				      </li>
+				    </ul>
+				    <form class="form-inline my-2 my-lg-0" action="hola">
+				      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+				      <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+				    </form>
+				  </div>
+				</nav>
+			</div>
 		</div>
-		<div id="acordion" role="tablist" aria-multiselectable="true">
+		{{-- <div id="acordion" role="tablist" aria-multiselectable="true">
 			<form action="/products/search" method="get">
 				
 				<div class="row justify-content-center">
@@ -105,7 +133,7 @@
 				</div>
 			</form>
 
-		</div>
+		</div> --}}
 	</div>
 	<div class="col-12 col-sm-12 col-md-12">
 		@if ($productos)

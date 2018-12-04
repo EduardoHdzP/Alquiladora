@@ -170,22 +170,18 @@ class ProductosController extends Controller{
     }
 
 
-     public function search(Request $request){
+     public function search(Request $request,$categoria){
         $f=$request->all();
-        if (empty($f)) {
-            echo "Vacio";
-        }else{
-            echo "no vacio";
-        }
-
         
+        $cat=DB::select("select cat_id from  categorias where nombre='".$categoria."'");
+        // print_r($cat);
         $productos=DB::select("
             SELECT * 
                 FROM productos p
-            WHERE status=1"
+            WHERE status=1 and cat_id=".$cat[0]->cat_id
             );
         // print_r($productos);
-        return view("productos.productos",compact("productos"));
+        return view("productos.listadoOperaciones",compact("productos"));
      }
 
 
