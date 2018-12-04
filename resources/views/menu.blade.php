@@ -26,7 +26,7 @@
 					<li><a href="/package/create">Nuevo <span class="icon-dot"></span></a></li>
 					<li><a href="/paquetes/modificar">Modificar <span class="icon-dot"></span></a></li>
 					<li><a href="/paquetes/eliminar"></span>Eliminar</a></li>
-					<li><a href="/paquetes">Listar <span class="icon-dot"></span></a></li>				
+					<li><a href="/packages">Listar <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>
 			<li class="submenu">

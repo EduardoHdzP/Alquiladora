@@ -177,51 +177,12 @@ class ProductosController extends Controller{
         }else{
             echo "no vacio";
         }
-        // print_r($filtros);
-        $cs=0;
-        $cm=0;
-        $cl=0;
-        $cc=0;
-        $u1Min=1;
-        $u1Max=9999999;
-        $u2Min=0;
-        $u2Max=0;
 
-        if (isset($f["cSilla"])) {
-            $cs=1;
-        }
-        if (isset($f["cMesa"])) {
-            $cm=2;
-        }
-        if (isset($f["cLona"])) {
-            $cl=3;
-        }
-        if (isset($f["cCarpa"])) {
-            $cc=4;
-        }
-        if (isset($f["u1-10"])) {
-            $u1Min=1;
-            $u1Max=10;
-        }
-        if (isset($f["u11-20"])) {
-            $u2Min=11;
-            $u2Max=20;
-        }
+        
         $productos=DB::select("
             SELECT * 
                 FROM productos p
-            WHERE status=1
-
-                AND (
-                    ganancia between $u1Min and $u1Max 
-                    OR ganancia between $u2Min and $u2Max
-                )
-
-                AND (categoria_id=$cs 
-                    OR categoria_id=$cm 
-                    OR categoria_id=$cl 
-                    OR categoria_id=$cc
-                )"
+            WHERE status=1"
             );
         // print_r($productos);
         return view("productos.productos",compact("productos"));

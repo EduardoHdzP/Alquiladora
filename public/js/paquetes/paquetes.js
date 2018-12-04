@@ -12,3 +12,26 @@ function agregarProductoAPaquete(paqId, proId){
 	$("#producto").val(proId);
 }
 
+
+function detallesPaquete(idP){
+	$.ajax({
+		url: '/packages/'+idP,
+			method: 'GET',
+			dataType: 'html',
+			// headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+			data: {
+				id:idP,
+			}
+	})
+	.done(function(ht) {
+		$("#detalles").html(ht);
+		$("#modalDetalles").modal('toggle');
+		console.log(ht);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+}

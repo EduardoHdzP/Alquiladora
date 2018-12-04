@@ -60,9 +60,24 @@ class PaquetesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id){
+        $paquetes=DB::select("
+            SELECT * 
+                FROM paquetes
+            WHERE paq_id=".$id
+        );
+
+        $pa=DB::select("
+            SELECT paqpro_id,paquetes.paq_id,paquetes.nombre paquete,productos.nombre producto,resurtidos.ppu,paqpros.cantidad,paquetes.*, productos.*
+                FROM productos
+                    LEFT JOIN paqpros ON paqpros.pro_id = productos.pro_id
+                    LEFT JOIN paquetes ON paqpros.paq_id = paquetes.paq_id
+                    LEFT JOIN resurtidos on productos.pro_id=resurtidos.pro_id
+            WHERE paquetes.paq_id=".$id
+        );
+        // print_r($pa);
+
+        return view("paquetes.detalles",compact('paquetes','pa'));
     }
 
     /**

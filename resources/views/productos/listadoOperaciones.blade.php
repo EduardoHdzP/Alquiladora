@@ -30,10 +30,10 @@
 				          Categorias
 				        </a>
 				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="#">Sillas</a>
-				          <a class="dropdown-item" href="#">Mesas</a>
-				          <a class="dropdown-item" href="#">Lonas</a>
-				          <a class="dropdown-item" href="#">Carpas</a>
+				          <a class="dropdown-item" href="/products/search/Sillas">Sillas</a>
+				          <a class="dropdown-item" href="/products/search/Mesas">Mesas</a>
+				          <a class="dropdown-item" href="/products/search/Lonas">Lonas</a>
+				          <a class="dropdown-item" href="/products/search/Carpas">Carpas</a>
 				        </div>
 				      </li>
 				    </ul>

@@ -38,7 +38,8 @@ Route::post('/categorias/nuevo', "CategoriasController@store")->name("store");
 /*#############################################################################################
 #################################### RUTAS DE PRODUCTOS #####################################*/
 Route::get('/products',"ProductosController@index")->name("index");
-Route::get('/products/search',"ProductosController@search")->name("search");
+Route::get('/products/search/{categoria}',"ProductosController@search")->name("search");
+// Route::get('/products/search',"ProductosController@search")->name("search");
 Route::get('/products/{id}',"ProductosController@show")->where("id","[0-9]+");
 Route::get('/products/create',"ProductosController@create")->name("createProduct");
 Route::get('/products/store',"ProductosController@store")->name("storeProduct");
@@ -63,7 +64,8 @@ Route::get("/products/destroy/{id}","ProductosController@destroy")->name("destro
 // Route::get('/paquetes/{id}',"PaquetesController@show")->where("id","[0-9]+");
 // Route::get('paquetes/nuevo',"PaquetesController@create");
 
-
+Route::get('packages',"PaquetesController@index")->name("indexPackage");
+Route::get('/packages/{id}',"PaquetesController@show")->where("id","[0-9]+");
 Route::get('/package/create',"PaquetesController@create")->name("createPackage");
 Route::get('/package/store',"PaquetesController@store")->name("storePackage");
 Route::get('/package/update/{id}',"PaquetesController@addProduct")->name("addProductPackage");
