@@ -171,7 +171,8 @@ class ProductosController extends Controller{
 
 
      public function search(Request $request,$categoria){
-        $productos;
+        $productos=null;
+        
         if ($categoria!="Sillas" &&
             $categoria!="Mesas" &&
             $categoria!="Lonas" &&
@@ -182,11 +183,14 @@ class ProductosController extends Controller{
             $productos=DB::select("select * from productos where nombre like '%".$nombre."%'");
         } else {
             $cat=DB::select("select cat_id from  categorias where nombre='".$categoria."'");
-            $productos=DB::select("
-                SELECT * 
-                    FROM productos p
-                WHERE status=1 and cat_id=".$cat[0]->cat_id
-            );
+            if($cat){
+                $productos=DB::select("
+                    SELECT * 
+                        FROM productos p
+                    WHERE status=1 and cat_id=".$cat[0]->cat_id
+                );
+            }
+            
         }
 
         return view("productos.listadoOperaciones",compact("productos"));

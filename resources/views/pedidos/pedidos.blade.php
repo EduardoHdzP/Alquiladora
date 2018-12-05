@@ -6,11 +6,11 @@
 	<div class="col-12 col-sm-12 col-md-12">
 		@if ($res)
 			<div class="alert alert-info m-0">
-				<p class="h2 text-center">Listado de resurtidos</p>
+				<p class="h1 text-center">Listado de pedidos</p>
 
 		@else
-			<div class="alert alert-info m-0">
-				<p class="h2 text-center">No hay resurtidos</p>
+			<div class="alert alert-danger m-0">
+				<p class="h1 text-center">No hay pedidos</p>
 
 		@endif
 		</div>

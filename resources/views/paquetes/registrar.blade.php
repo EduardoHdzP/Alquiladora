@@ -16,22 +16,22 @@
 		      <div class="modal-body">
 		          <div class="form-group">
 		            <label for="nombre" class="col-form-label">Nombre</label>
-		            <input type="text" class="form-control" id="nombre" name="nombre">
+		            <input required="" type="text" class="form-control" id="nombre" name="nombre">
 		          </div>
 		          <div class="form-group">
 					<label>Imagen</label>				
 					<div class="custom-file">
-					  <input type="file" class="custom-file-input" id="imagen" name="imagen">
+					  <input required="" type="file" class="custom-file-input" id="imagen" name="imagen">
 					  <label class="custom-file-label" for="imagen" id="img">default</label>
 					</div>
 				  </div>
 		          <div class="form-group">
 		            <label for="descuento" class="col-form-label">Descuento</label>
-		            <input type="text" class="form-control" id="descuento" name="descuento"></input>
+		            <input required="" type="text" class="form-control" id="descuento" name="descuento"></input>
 		          </div>
 		          <div class="form-group">
 		            <label for="descripcion" class="col-form-label">Descripción</label>
-		            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+		            <textarea required="" class="form-control" id="descripcion" name="descripcion"></textarea>
 		          </div>
 		      </div>
 		      <div class="modal-footer">
@@ -52,7 +52,7 @@
 						<th colspan="6" style="font-size: 22px"><i>Paquete:
 						</i></th>
 						<th><center>
-							<button type="button" class="btn bg-dark btn-block text-white" data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Nuevo</button>
+							<button type="button" class="btn btn-info btn-block text-white" data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Nuevo</button>
 						</center></th>
 					</tr>
 					<tr>
@@ -106,8 +106,8 @@
 				@endforeach
 			</div>
 		@else
-			<div class="alert alert-danger text-center">
-				<h1>No hay paquetes registrados</h1>
+			<div class="alert alert-info">
+				<p class="h2 text-center">No hay paquetes</p>
 			</div>
 		@endif
 	</div> 

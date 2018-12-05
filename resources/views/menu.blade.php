@@ -36,6 +36,14 @@
 					<li><a href="/refill/list">Listar <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>
+			<li class="submenu">
+				<a href="#"><span class="fa fa-file-o"></span>Pedidos<span class="caret icon-arrow-down6"></span></a>
+				<ul class="children">
+					<li><a href="/orders/hoy">El dia de hoy <span class="icon-dot"></span></a></li>
+					<li><a href="/orders/sinConfirmar">Sin confirmar<span class="icon-dot"></span></a></li>
+					<li><a href="/orders/todos">Todos <span class="icon-dot"></span></a></li>				
+				</ul>
+			</li>
 			{{-- <li><a href="index.php?action=registrarPaquete"><span class="icon-earth"></span>Paquetes</a></li>		 --}}
 			{{-- <li><a href="#"><span class="icon-earth"></span>Quienes somos</a></li> --}}
 			{{-- <li><a href="#"><span class="icon-mail"></span>Contacto</a></li> --}}

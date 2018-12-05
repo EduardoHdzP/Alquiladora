@@ -78,3 +78,20 @@ Route::get('/refill/store',"ResurtidosController@store")->name("storeResurtidos"
 // Route::get('/package/destroyPaqpros/{idPaq}/{idPapr}','PaquetesController@destroyPaqpros')->name('destroyPaqpros');
 /*################################ FIN RUTAS DE RESURTIDOS #####################################
 #############################################################################################*/
+
+
+
+/*#############################################################################################
+#################################### RUTAS DE PEDIDOS #####################################*/
+
+Route::get('/orders/{filtro}',"PedidosController@index")->name("indexPedidos");
+// Route::get('/refill/list',"ResurtidosController@show")->name("showResurtidos");
+// Route::get('/refill/search/{categoria}',"ResurtidosController@search")->name("searchRefill");
+// Route::get('/packages/{id}',"PaquetesController@show")->where("id","[0-9]+");
+// Route::get('/package/create',"PaquetesController@create")->name("createPackage");
+// Route::get('/refill/store',"ResurtidosController@store")->name("storeResurtidos");
+// Route::get('/package/update/{id}',"PaquetesController@addProduct")->name("addProductPackage");
+// Route::get("/packages/destroy/{id}","PaquetesController@destroy")->name("destroyPackage");
+// Route::get('/package/destroyPaqpros/{idPaq}/{idPapr}','PaquetesController@destroyPaqpros')->name('destroyPaqpros');
+/*################################ FIN RUTAS DE PEDIDOS #####################################
+#############################################################################################*/

@@ -48,8 +48,8 @@
 				@endforeach
 			</div>
 		@else
-			<div class="alert alert-warning">
-				<p class="h3 text-center">No hay paquetes registrados</p>
+			<div class="alert alert-info">
+				<p class="h2 text-center">No hay paquetes</p>
 			</div>
 		@endif
 		

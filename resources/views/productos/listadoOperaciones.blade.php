@@ -80,7 +80,9 @@
 				
 			</div>
 		@else
-			<h1>No hay productos registrados</h1>
+			<div class="alert alert-info">
+				<p class="h2 text-center">No hay productos</p>
+			</div>
 		@endif
 		
 	</div> 
