@@ -53,17 +53,6 @@ Route::get("/products/destroy/{id}","ProductosController@destroy")->name("destro
 
 /*#############################################################################################
 #################################### RUTAS DE PAQUESTES #####################################*/
-// Route::get("/paquetes/modificar", function(){
-// 	return view("paquetes.modificar");
-// });
-
-// Route::get("/paquetes/eliminar", function(){
-// 	return view("paquetes.eliminar");
-// });
-// Route::get('/paquetes',"PaquetesController@index");
-// Route::get('/paquetes/{id}',"PaquetesController@show")->where("id","[0-9]+");
-// Route::get('paquetes/nuevo',"PaquetesController@create");
-
 Route::get('packages',"PaquetesController@index")->name("indexPackage");
 Route::get('/packages/{id}',"PaquetesController@show")->where("id","[0-9]+");
 Route::get('/package/create',"PaquetesController@create")->name("createPackage");
@@ -72,4 +61,20 @@ Route::get('/package/update/{id}',"PaquetesController@addProduct")->name("addPro
 Route::get("/packages/destroy/{id}","PaquetesController@destroy")->name("destroyPackage");
 Route::get('/package/destroyPaqpros/{idPaq}/{idPapr}','PaquetesController@destroyPaqpros')->name('destroyPaqpros');
 /*################################ FIN RUTAS DE PAQUESTES #####################################
+#############################################################################################*/
+
+
+/*#############################################################################################
+#################################### RUTAS DE RESURTIDOS #####################################*/
+
+Route::get('/refill',"ResurtidosController@index")->name("indexResurtidos");
+Route::get('/refill/list',"ResurtidosController@show")->name("showResurtidos");
+Route::get('/refill/search/{categoria}',"ResurtidosController@search")->name("searchRefill");
+// Route::get('/packages/{id}',"PaquetesController@show")->where("id","[0-9]+");
+// Route::get('/package/create',"PaquetesController@create")->name("createPackage");
+Route::get('/refill/store',"ResurtidosController@store")->name("storeResurtidos");
+// Route::get('/package/update/{id}',"PaquetesController@addProduct")->name("addProductPackage");
+// Route::get("/packages/destroy/{id}","PaquetesController@destroy")->name("destroyPackage");
+// Route::get('/package/destroyPaqpros/{idPaq}/{idPapr}','PaquetesController@destroyPaqpros')->name('destroyPaqpros');
+/*################################ FIN RUTAS DE RESURTIDOS #####################################
 #############################################################################################*/

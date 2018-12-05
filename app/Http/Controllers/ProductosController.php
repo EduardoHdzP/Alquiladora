@@ -188,9 +188,7 @@ class ProductosController extends Controller{
                 WHERE status=1 and cat_id=".$cat[0]->cat_id
             );
         }
-        
-        
-        
+
         return view("productos.listadoOperaciones",compact("productos"));
      }
 

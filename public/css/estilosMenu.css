@@ -18,7 +18,8 @@ header {
 }
  
 header nav {
-	background:#023859;
+	/*background:#023859;*/
+	background: black;
 	z-index:1000;
 	max-width: 1380px;
 	width:100%;

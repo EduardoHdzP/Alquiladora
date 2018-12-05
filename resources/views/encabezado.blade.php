@@ -30,7 +30,7 @@
       }
 
       .capaTitulo{
-        background: #023859;
+        background: black;
         width: 100%;
         max-width: 1380px;
         color: #fff;

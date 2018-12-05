@@ -32,8 +32,8 @@
 			<li class="submenu">
 				<a href="#"><span class="fa fa-file-o"></span>Resurtidos<span class="caret icon-arrow-down6"></span></a>
 				<ul class="children">
-					<li><a href="/package/create">Nuevo <span class="icon-dot"></span></a></li>
-					<li><a href="/paquetes">Listar <span class="icon-dot"></span></a></li>				
+					<li><a href="/refill">Nuevo <span class="icon-dot"></span></a></li>
+					<li><a href="/refill/list">Listar <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>
 			{{-- <li><a href="index.php?action=registrarPaquete"><span class="icon-earth"></span>Paquetes</a></li>		 --}}

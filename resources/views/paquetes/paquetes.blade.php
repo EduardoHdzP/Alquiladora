@@ -38,9 +38,9 @@
 						    <p class="card-text m-0"><strong>Descuento: </strong>{{ $p->descuento }}%</p>
 
 						    <center>
-						    	<a onclick="detallesPaquete('{{ $p->paq_id }}')" class="btn btn-sm btn-info">Detalles</a>
-						    	<a href="/package/update/{{ $p->paq_id }}" class="btn btn-sm btn-warning">Editar</a>
-						    	<a onclick="eliminarPaquete('{{ $p->paq_id }}')" class="btn btn-sm btn-danger">Eliminar</a>
+						    	<a onclick="detallesPaquete('{{ $p->paq_id }}')" class="btn btn-info">Detalles</a>
+						    	<a href="/package/update/{{ $p->paq_id }}" class="btn btn-warning">Editar</a>
+						    	<a onclick="eliminarPaquete('{{ $p->paq_id }}')" class="btn btn-danger">Eliminar</a>
 						    </center>
 						  </div>
 						</div>
