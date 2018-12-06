@@ -39,9 +39,9 @@
 			<li class="submenu">
 				<a href="#"><span class="fa fa-file-o"></span>Pedidos<span class="caret icon-arrow-down6"></span></a>
 				<ul class="children">
-					<li><a href="/orders/hoy">El dia de hoy <span class="icon-dot"></span></a></li>
-					<li><a href="/orders/sinConfirmar">Sin confirmar<span class="icon-dot"></span></a></li>
-					<li><a href="/orders/todos">Todos <span class="icon-dot"></span></a></li>				
+					<li><a href="/orders/today">El dia de hoy <span class="icon-dot"></span></a></li>
+					<li><a href="/orders/unconfirmed">Sin confirmar<span class="icon-dot"></span></a></li>
+					<li><a href="/orders/all">Todos <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>
 			{{-- <li><a href="index.php?action=registrarPaquete"><span class="icon-earth"></span>Paquetes</a></li>		 --}}

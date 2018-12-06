@@ -22,6 +22,7 @@
 			    <tr>
 			      <th scope="col">ID</th>
 			      <th scope="col">Persona</th>
+			      <th scope="col">Telefono</th>
 			      <th scope="col">Direccion</th>
 			      <th scope="col">Destino</th>
   			      <th scope="col">Fecha</th>
@@ -35,13 +36,14 @@
 				    <tr>
 				      <th scope="row">{{ $p->ped_id }}</th>
 				      <td>{{ $p->persona }}</td>
+				      <td>{{ $p->tel }}</td>
 				      <td>{{ $p->direccion  }}</td>
 				      <td>{{ $p->destino }}</td>
-				      <td>{{ $p->created_at }}</td>
-				      <td>{{ $p->fechaent }} {{ $p->horaent }}</td>
+				      <td>{{ $p->fecha }}</td>
+				      <td>{{ $p->fecha }} {{ $p->horaent }}</td>
   				      <td>{{ $p->status}}</td>
 
-				      <td><button class="btn btn-outline-danger btn-sm btn-block">Eliminar</button></td>
+				      <td><button class="btn btn-outline-danger btn-sm btn-block">Editar</button></td>
 				    </tr>
 				@endforeach
 			  </tbody>

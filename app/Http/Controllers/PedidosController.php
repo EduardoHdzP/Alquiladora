@@ -12,16 +12,33 @@ class PedidosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        $ped=DB::select("
-            SELECT concat(persona.nombre,' ',persona.app,' ',persona.apm) AS persona, destino.direccion, destino.nombre AS destino, pedidos.*
-            FROM destino
-                LEFT JOIN pedidos ON pedidos.des_id = destino.des_id
-                LEFT JOIN usuario ON destino.usu_id = usuario.usu_id
-                LEFT JOIN persona ON usuario.per_id = persona.per_id
-            ORDER BY pedidos.created_at DESC"
+    public function index($filtro){
+        $ped=null;
 
-        );
+        if ($filtro=="all") {
+            $ped=DB::select("
+                SELECT concat(persona.nombre,' ',persona.app,' ',persona.apm) AS persona,persona.tel ,destino.direccion, destino.nombre AS destino, pedidos.*
+                FROM destino
+                    INNER JOIN pedidos ON pedidos.des_id = destino.des_id
+                    INNER JOIN usuario ON destino.usu_id = usuario.usu_id
+                    INNER JOIN persona ON usuario.per_id = persona.per_id
+                ORDER BY pedidos.created_at DESC"
+            );
+        }elseif ($filtro=="today") {
+             $ped=DB::select("
+                SELECT concat(persona.nombre,' ',persona.app,' ',persona.apm) AS persona,persona.tel, destino.direccion, destino.nombre AS destino, pedidos.*
+                FROM destino
+                    INNER JOIN pedidos ON pedidos.des_id = destino.des_id
+                    INNER JOIN usuario ON destino.usu_id = usuario.usu_id
+                    INNER JOIN persona ON usuario.per_id = persona.per_id
+                WHERE pedidos.fecha=curdate()
+                ORDER BY pedidos.created_at DESC"
+            );
+
+        }elseif ($filtro=="unconfirmed") {
+            
+        }
+        
 
         // print_r($ped);
 
