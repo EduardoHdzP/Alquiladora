@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PedidosController extends Controller
 {
@@ -13,17 +14,18 @@ class PedidosController extends Controller
      */
     public function index(){
         $ped=DB::select("
-            SELECT *
-            FROM pedidos
-                INNER JOIN resurtidos ON resurtidos.pro_id = productos.pro_id
-            ORDER BY resurtidos.created_at DESC"
+            SELECT concat(persona.nombre,' ',persona.app,' ',persona.apm) AS persona, destino.direccion, destino.nombre AS destino, pedidos.*
+            FROM destino
+                LEFT JOIN pedidos ON pedidos.des_id = destino.des_id
+                LEFT JOIN usuario ON destino.usu_id = usuario.usu_id
+                LEFT JOIN persona ON usuario.per_id = persona.per_id
+            ORDER BY pedidos.created_at DESC"
 
         );
 
-        print_r($ped);
-        return "peidos";
+        // print_r($ped);
 
-        // return view("pedidos.pedidos",compact('res'));
+        return view("pedidos.pedidos",compact('ped'));
     }
 
     /**

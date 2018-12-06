@@ -6,7 +6,7 @@
 	<div class="col-12 col-sm-12 col-md-12">
 		@if ($res)
 			<div class="alert alert-info m-0">
-				<p class="h2 text-center">Listado de resurtidos</p>
+				<p class="h1 text-center">Listado de resurtidos</p>
 
 		@else
 			<div class="alert alert-info m-0">
