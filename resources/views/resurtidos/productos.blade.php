@@ -108,6 +108,7 @@
 		@else
 			<div class="alert alert-info">
 				<p class="h2 text-center">No hay productos</p>
+				<p class="h6 text-center"><a href="/products/create"><strong>Registrar un producto</strong></a></p>
 			</div>
 		@endif
 		

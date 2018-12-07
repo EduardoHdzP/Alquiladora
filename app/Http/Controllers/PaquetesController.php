@@ -55,9 +55,9 @@ class PaquetesController extends Controller
 	$p->status=1;
 	// $p->fecha=$date->format('Y-m-d'); 
 	$p->save();
-	$paC=DB::select('SELECT * FROM paquetes WHERE paq_id='.$p->id);
+	$paC=DB::select('SELECT * FROM paquetes WHERE paq_id='.$p->paq_id);
     // return view('paquetes.productoPaquete',compact('pa',["registro"=>"ok"]));
-    return redirect()->route("addProductPackage", $parameters = ["id"=>$p->id]);
+    return redirect()->route("addProductPackage", $parameters = ["id"=>$p->paq_id]);
     }
 
     /**

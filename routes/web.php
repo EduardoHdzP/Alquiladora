@@ -37,7 +37,7 @@ Route::post('/categorias/nuevo', "CategoriasController@store")->name("store");
 
 /*#############################################################################################
 #################################### RUTAS DE PRODUCTOS #####################################*/
-Route::get('/products',"ProductosController@index")->name("index");
+Route::get('/products',"ProductosController@index")->name("indexProducts");
 Route::get('/products/search/{categoria}',"ProductosController@search")->name("search");
 // Route::get('/products/search',"ProductosController@search")->name("search");
 Route::get('/products/{id}',"ProductosController@show")->where("id","[0-9]+");
@@ -85,6 +85,8 @@ Route::get('/refill/store',"ResurtidosController@store")->name("storeResurtidos"
 #################################### RUTAS DE PEDIDOS #####################################*/
 
 Route::get('/orders/{filtro}',"PedidosController@index")->name("indexPedidos");
+Route::get('/orders/to/graphics',"PedidosController@datosGraficar")->name("datosGraficarPedidos");
+
 // Route::get('/refill/list',"ResurtidosController@show")->name("showResurtidos");
 // Route::get('/refill/search/{categoria}',"ResurtidosController@search")->name("searchRefill");
 // Route::get('/packages/{id}',"PaquetesController@show")->where("id","[0-9]+");

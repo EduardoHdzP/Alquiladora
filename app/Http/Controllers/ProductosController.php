@@ -91,8 +91,8 @@ class ProductosController extends Controller{
         $r->ppu=$producto["ppu"];
         $r->save();
 
-        print_r($producto);
-        return "Producto registrado correctamente";
+        // print_r($producto);
+        return redirect()->route('indexProducts');;
     }
 
     /**
@@ -150,9 +150,9 @@ class ProductosController extends Controller{
         }
         $pr->cat_id=$p['categoria'];
         if ($pr->save()) {
-            return redirect()->route("index",["update"=>"ok"]);
+            return redirect()->route("indexProducts",["update"=>"ok"]);
         }else{
-            return redirect()->route("index");
+            return redirect()->route("indexProducts");
         }
     }
 

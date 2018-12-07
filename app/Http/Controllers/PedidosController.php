@@ -110,4 +110,17 @@ class PedidosController extends Controller
     {
         //
     }
+
+    public function datosGraficar(){
+        $p=DB::select("
+            SELECT mes,COUNT(mes) total 
+                from (SELECT month(fecha)mes  FROM pedidos)a 
+            GROUP BY mes"
+
+        );
+        // $p=compact($p);
+        $p=json_encode($p);
+
+        return $p;
+    }
 }

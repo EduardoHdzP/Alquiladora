@@ -79,18 +79,27 @@ if($pa){
 </div>
 
 <div class="row mt-3">
-	@foreach ($productos as $p)
-		<div class="col-12 col-sm-6 col-md-3">
-			<div class="card m-0" style="width: 18rem;">
-			  <img class="card-img-top" src="{{ asset('img/productos/'.$p->imagen) }}" alt="Card image cap">
-			  <div class="card-body">
-			    <h5 class="card-title">{{ $p->nombre }}</h5>
-			    <p class="card-text">{{ $p->descripcion }}</p>
-			    <button class="btn btn-primary btn-block" onclick="agregarProductoAPaquete(@php if($pa){echo $pa[0]->paq_id; }else{echo $paC->paq_id;} @endphp,{{ $p->pro_id }} )">Añadir</button>
-			  </div>
+	@if ($productos)
+		@foreach ($productos as $p)
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="card m-0" style="width: 18rem;">
+				  <img class="card-img-top" src="{{ asset('img/productos/'.$p->imagen) }}" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">{{ $p->nombre }}</h5>
+				    <p class="card-text">{{ $p->descripcion }}</p>
+				    <button class="btn btn-primary btn-block" onclick="agregarProductoAPaquete(@php if($pa){echo $pa[0]->paq_id; }else{echo $paC->paq_id;} @endphp,{{ $p->pro_id }} )">Añadir</button>
+				  </div>
+				</div>
+			</div>
+		@endforeach
+	@else
+		<div class="col-12 col-sm-12 col-md-12">
+			<div class="alert alert-info">
+				<p class="h2 text-center">No hay productos</p>
+				<p class="h6 text-center"><a href="/products/create"><strong>Registrar un producto</strong></a></p>
 			</div>
 		</div>
-	@endforeach
+	@endif
 	
 </div>
 

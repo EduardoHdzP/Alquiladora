@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/estilosMenu.css')}}">
     <link rel="stylesheet" href="{{ asset('libs/SweetAlert2/css/sweetalert2.css')}}">
+    <script rel="stylesheet" href="{{ asset('libs/chartist/chartist.min.css')}}"></script>
+
 
     {{-- <script type="text/javascript" charset="utf-8" async defer>
          function mostrarModalRegistro(){
