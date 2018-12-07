@@ -118,7 +118,7 @@ class PedidosController extends Controller
             GROUP BY mes"
 
         );
-        // $p=compact($p);
+        // print_r($p);
         $p=json_encode($p);
 
         return $p;
