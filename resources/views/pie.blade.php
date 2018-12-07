@@ -9,5 +9,7 @@
 <script type="text/javascript" src="{{ asset('js/pedidos/pedidos.js')  }}"></script>
 <script type="text/javascript" src="{{ asset('libs/SweetAlert2/js/sweetalert2.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('libs/chartist/chartist.min.js')}}"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
 </body>
 </html>

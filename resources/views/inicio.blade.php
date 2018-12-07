@@ -15,30 +15,16 @@
 </div>
 
 <div class="row">
-	<div class="col-12 col-sm-12 col-md-6">
-				<div class="ct-chart ct-perfect-fourth"></div>
-	</div>
-	<div class="col-12 col-sm-12 col-md-6">
-		<figure class="figure">
-			<img class="img-fluid rounded" src="{{ asset('img/graficas/linechart.png') }}" alt="">
-			<figcaption class="figure-caption">
-				<p class="text-center"> Lorem ipsum.</p>
-			</figcaption>
-		</figure>
+	<div class="col-12 col-sm-12 col-md-12 pb-4">
+		<div id="grafica" class="grafica"></div>
 	</div>
 </div>
 
 @include("pie")
 
+
 <script>
-	// $(document).ready(function(){
-	// 	graficarPedidos();
-	// });
-	var data = {
-		  labels: ['Matematicas', 'Español', 'Comprension'],
-		  series: [
-		    [5, 2, 4]
-		  ]
-		};
-		new Chartist.Line('.ct-chart', data);
+	$(document).ready(function(){
+		graficarPedidos();
+	});
 </script>
