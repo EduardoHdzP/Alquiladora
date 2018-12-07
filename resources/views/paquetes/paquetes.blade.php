@@ -8,17 +8,14 @@
 
 
 <div class="row mt-3">
-	<div class="col-12 col-sm-12 col-md-12 mb-3">
-		<div class="row">
-			<div class="col-md-12 pt-3">
-				<p class="h1 text-center text-info">Nuestros paquetes</p>
-			</div>
-		</div>
-	</div>
 	<div class="col-12 col-sm-12 col-md-12">
 		@if ($paquetes)
 			<div class="row">
-				
+				<div class="col-12 col-sm-12 col-md-12">
+					<div class="alert alert-info">
+						<p class="h2 text-center text-info">Nuestros paquetes</p>
+					</div>
+				</div>
 				@foreach ($paquetes as $p)
 					<div class="col-12 col-sm-6 col-md-3 mb-2">
 						<div class="card" style="width: 18rem;">
@@ -50,6 +47,7 @@
 		@else
 			<div class="alert alert-info">
 				<p class="h2 text-center">No hay paquetes</p>
+				<a href=""><p class="h5 text-center">Registrar un paquete</p></a>
 			</div>
 		@endif
 		

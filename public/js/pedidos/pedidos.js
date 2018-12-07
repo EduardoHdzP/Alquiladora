@@ -24,8 +24,8 @@ function graficarPedidos(){
 		$('#grafica').highcharts({
              title:{text:'Pedidos'},
              xAxis:{categories:meses},
-             yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:3,color:'#FA0808'}]},
-             tooltip:{valueSuffix:'%'},
+             yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:3,color:"#FA0808"}]},
+             tooltip:{valueSuffix:''},
              legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
              series: [{
 				        name: 'Pedidos',

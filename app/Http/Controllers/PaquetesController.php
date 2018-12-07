@@ -15,6 +15,7 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
+        $paquetes=null;
         $paquetes=DB::select("
             SELECT * 
                 FROM paquetes 
@@ -31,7 +32,14 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        return view("paquetes.registrar");
+        $paquetes=null;
+        $paquetes=DB::select("
+            SELECT * 
+                FROM paquetes 
+            WHERE status=1;"
+        );
+
+        return view("paquetes.registrar",compact('paquetes'));
     }
 
     /**

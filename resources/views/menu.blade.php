@@ -19,13 +19,10 @@
 					<li><a href="/products">Listar <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>
-
 			<li class="submenu">
 				<a href="#"><span class="fa fa-file-o"></span>Paquetes<span class="caret icon-arrow-down6"></span></a>
 				<ul class="children">
 					<li><a href="/package/create">Nuevo <span class="icon-dot"></span></a></li>
-					<li><a href="/paquetes/modificar">Modificar <span class="icon-dot"></span></a></li>
-					<li><a href="/paquetes/eliminar"></span>Eliminar</a></li>
 					<li><a href="/packages">Listar <span class="icon-dot"></span></a></li>				
 				</ul>
 			</li>
